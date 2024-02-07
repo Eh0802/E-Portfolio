@@ -30,11 +30,25 @@ li {
     flex: 1;
 }
 
+.container {
+    padding: 50px 0;
+}
+
 .row {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
 }
+
+section:nth-child(even) {
+    background-color: #f8f8f8;
+    margin: 150px 0 0px 0;
+}
+
+.section_title {
+    margin-bottom: 20px;
+}
+
 
 /* Nav */
 
@@ -71,6 +85,11 @@ nav {
     background-color: green;
 }
 
+.about_me_info{
+    display: flex;
+    flex-direction: column;
+}
+
 .My_Name {
     font-size: 26px;
     color: lightgreen;
@@ -89,7 +108,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     text-align: center;
 }
@@ -113,9 +132,116 @@ nav {
 }
 
 .hello {
-    margin-bottom: 10px;
+    margin-bottom: 16px;
 }
 .about--p {
     font-size: 20px;
     margin-bottom: 28px;
+}
+
+.about_me-link {
+    font-size: 20px;
+    color: lightgreen;
+    text-decoration: none;
+    padding: 0 16px;
+}
+
+.about-me_img--container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me_img {
+    width: 100%;
+}
+
+.line-stack {
+    color: lightgreen;
+}
+
+.Language_img {
+    width: 100%;
+    max-width: 100px;
+    transition: all 300ms ease;
+}
+
+.Language:hover .Language_img {
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform: scale(0.9);
+}
+
+.Language {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.Language_img--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 16px;
+    
+}
+
+.Languages_list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.language_name {
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    opacity: 0;
+}
+
+.language:hover .language_name {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.project_img {
+    width: 100%;
+    transition: all 500ms ease;
+}
+
+.project_wrapper {
+    box-shadow: 0 20px 80px rgba(0, 0, 0, .0.01);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative
+}
+
+.project_wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1c1d25;
+    opacity: 0;   
+    transition: opacity 450ms ease;
+    z-index: 0.7;
+}
+
+
+
+.project:hover .project_wrapper::before {
+    opacity: 0.7;
+}
+
+.project:hover .project_img {
+    transform: scale(1.07);
+    filter: blur(5px);
+}
+
+.project_list {
+    padding-top: 40px;
 }
